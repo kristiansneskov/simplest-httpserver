@@ -1,0 +1,16 @@
+{
+  "name": "nodeServer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "httpServer.js",
+  "dependencies": {
+    "http": "^0.0.0",
+    "httpdispatcher": "^0.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kristiansneskov",
+  "license": "ISC"
+}
