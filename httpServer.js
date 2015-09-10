@@ -9,10 +9,17 @@ const PORT=8080;
 function handleRequest(request, response){
   try {
     console.log('Received request ' + request.method);
+    request.on('data',function(chunk) {
+      console.log(chunk.toString());
+    });
+
+    request.on('end',function() {
+    response.writeHead(200,"OK");
+    response.end('...And like all my plans, its so simple an idiot could have devised it! ' + request.url);
+    });
   } catch (err) {
     console.log(err);
   }
-  response.end('...And like all my plans, its so simple an idiot could have devised it! ' + request.url);
 }
 //
 //    //Create a server
